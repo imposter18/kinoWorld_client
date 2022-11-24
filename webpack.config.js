@@ -33,7 +33,7 @@ module.exports = {
 				use: ["file-loader"],
 			},
 			{
-				test: /\.m?jsx$/,
+				test: /\.jsx$/,
 				exclude: /node_modules/,
 				use: {
 					loader: "babel-loader",
