@@ -1,0 +1,30 @@
+.header {
+	position: sticky;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+	background-color: var(--color-dark);
+
+	@media (max-width: 768px) {
+	}
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+	max-width: 1200px;
+	margin: auto;
+}
+.left {
+	position: relative;
+	display: flex;
+	align-items: center;
+	padding-top: 22px;
+	padding-bottom: 22px;
+
+	@media (max-width: 768px) {
+		width: 100%;
+		padding: 0;
+	}
+}

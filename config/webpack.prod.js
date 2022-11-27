@@ -10,13 +10,13 @@ module.exports = merge(common, {
 	devtool: false,
 	output: {
 		path: paths.build,
-		publicPath: "/",
+		publicPath: "./",
 		filename: "js/[name].[contenthash].bundle.js",
 	},
 	module: {
 		rules: [
 			{
-				test: /\.(sass|scss|css)$/,
+				test: /\.m?(sass|scss|css)$/,
 				use: [
 					MiniCssExtractPlugin.loader,
 					{
@@ -24,7 +24,9 @@ module.exports = merge(common, {
 						options: {
 							importLoaders: 2,
 							sourceMap: false,
-							modules: false,
+							modules: {
+								localIdentName: "[name]__[local]--[hash:base64:5]",
+							},
 						},
 					},
 					"postcss-loader",
